@@ -1,0 +1,27 @@
+.SearchButton{ 
+    background-color: transparent;
+}
+
+.SearchButton-icon {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+@media screen and (min-width: 1024px) {
+    .SearchButton {
+        display: none;
+    }
+
+    .SearchButton{
+        padding-block-start: 0.75rem;
+        padding-block-end: 0.75rem;
+        padding-inline-start: 2rem;
+        padding-inline-end: 2rem;
+        background-color: var(--black);
+        inline-size: 5.5rem;
+        block-size: 3rem;
+        border-end-end-radius: .5rem;
+        border-start-end-radius: .5rem;
+    }
+ 
+}

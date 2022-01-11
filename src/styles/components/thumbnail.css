@@ -1,0 +1,48 @@
+.thumbnail {   
+    position: relative;
+}
+
+.thumbnail--big {
+    inline-size: 18.9375rem;
+    block-size: 10.625rem;
+}
+
+.thumbnail--small {
+    inline-size: 12.1875rem;
+    block-size: 6.8125rem;
+}
+
+
+.thumbnail-figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: border-box;
+}
+
+.thumbnail-img {
+    inline-size: 100%;
+    block-size: 100%;
+    vertical-align: middle;
+}
+
+.thumbnail-timer {
+    position: absolute;
+    inset-inline-end: 1rem;
+    background-color: var(--primary);
+    inset-block-end: 1rem;
+    padding: .25rem;
+    border-radius: 2px;
+    block-size: 1.5rem;
+    inline-size: 2.625rem;
+}
+
+.thumbnail-time-content{
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    text-align: center;
+    font: var(--body2-regular);
+}

@@ -1,0 +1,18 @@
+.Logo { 
+   inline-size: 9.5625rem;
+   block-size: 2.5rem;
+   cursor: pointer;
+}
+
+.Logo-image{
+    inline-size: 100%;
+    block-size: 100%;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 1024px) {
+    .Logo{
+        inline-size: 12.25rem;
+        block-size: 3rem;
+    }
+}

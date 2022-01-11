@@ -1,0 +1,28 @@
+.Tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid var(--grey);
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-end: .5rem;
+    padding-block-start: .5rem;
+    cursor: pointer;
+    border-radius: 2.75rem; 
+}
+
+.Tag-description {
+    margin: 0;
+    font: var(--body1-regular);
+}
+
+.Tag--active {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.Tag--inactive {
+    background-color: var(--black);
+    color: var(--white);
+}

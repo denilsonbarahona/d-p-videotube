@@ -1,0 +1,7 @@
+.LayoutCategories{
+    background-color: var(--primary);
+    display: flex;
+    gap: 1.5rem;
+    inline-size: 100%;
+    overflow-x: auto;
+}

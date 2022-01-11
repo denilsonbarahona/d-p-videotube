@@ -1,0 +1,7 @@
+.LayoutPlayItem{
+    inline-size: 18.9375rem; 
+    display: grid;
+    row-gap: 1rem;    
+    cursor: pointer; 
+}
+

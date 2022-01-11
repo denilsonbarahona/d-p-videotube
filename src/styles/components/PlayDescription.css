@@ -1,0 +1,36 @@
+.playDescription {
+    display: grid;
+    grid-template-columns: 2rem 1fr; 
+    column-gap: .5rem;
+}
+
+.playDescription-figure {
+    inline-size: 2rem;
+    block-size: 2rem; 
+    margin: 0;
+    padding: 0;
+}
+
+.playDescription-img{
+    inline-size: 100%;
+    block-size: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.playDescription-content >*{
+    margin: 0;
+    padding: 0; 
+}
+
+.playDescription-title {
+    color: var(--white);
+    font: var(--body1-bold);
+    margin-bottom: 0.5rem;
+}
+
+.playDescription-chanel,
+.playDescription-info {
+    font: var(--body2-regular);
+    color: var(--grey);
+}
