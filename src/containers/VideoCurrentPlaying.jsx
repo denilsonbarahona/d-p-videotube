@@ -7,7 +7,7 @@ const VideoCurrentPlaying =()=>{
     return (
         <LayoutCurrentPlaying>
            <VideoPlay/>
-    {/*        <Suggestions/> */}
+           <Suggestions/>
         </LayoutCurrentPlaying>
     )
 }

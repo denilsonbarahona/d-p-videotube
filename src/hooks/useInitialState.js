@@ -3,6 +3,7 @@ import { useState } from "react";
 const initialState = {
     category:"0",
     playlist: [],
+    searchList: [],
 }
 
 
@@ -21,10 +22,19 @@ const useInitialState =()=>{
         })
     }
 
+    const setSearchList =(payload)=>{
+        setState({
+            ...state, 
+            searchList:[...payload]
+        })
+    }
+    
+
     return {
         state, 
         selectedCategory,
-        setPlayList
+        setPlayList,
+        setSearchList
     }
 }
 

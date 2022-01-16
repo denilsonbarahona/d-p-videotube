@@ -16,7 +16,7 @@ const PlayDescription =({ title, channel, viewCount, publichAt, type })=>{
                 <h2 className='playDescription-title'> {title} </h2>
                 <p className='playDescription-chanel'> {channel.title} </p>
                 <p className='playDescription-info'>
-                    {Number(viewCount).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "1,")} views - {formatDate(new Date(publichAt)) }
+                    {Number(viewCount).toFixed().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")} views - {formatDate(new Date(publichAt)) }
                 </p>
             </div>
         </div>

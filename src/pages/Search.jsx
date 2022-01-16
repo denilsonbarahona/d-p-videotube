@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import CategoriesList from '../containers/CategoriesList';
+import { useParams   } from 'react-router-dom';
 import PlayItem from '../containers/PlayItem'; 
 import Header from '../containers/Header';
 import MainLayout from '../layouts/LayoutMain';
@@ -8,27 +8,25 @@ import useGetPlayList from '../hooks/useGetPlayList';
 import AppContext from '../context/AppContext';
 import '../styles/components/tags.css';
 
-const Home =()=>{
+const Search =()=>{
     const {state} = useContext(AppContext);
-    if(!state.playlist.length)
-        useGetPlayList("playlist"); 
+    const {query} = useParams();
+    useGetPlayList("search", query);
 
-
+ 
     return (
         <MainLayout>
-            <Header/>
-            <CategoriesList/> 
+            <Header/> 
             <LayoutPlayList>
-                { state.playlist.map(item=>(
+                { state.searchList.map(item=>(
                         <PlayItem 
-                            key={item.id}
+                            key={item.id.videoId}
                             item={item}
                             type='play'/> 
                     ))}
-            </LayoutPlayList>
-           {/* <VideoCurrentPlaying/> */}               
+            </LayoutPlayList>             
         </MainLayout>
     )
 }
 
-export default Home;
+export default Search;

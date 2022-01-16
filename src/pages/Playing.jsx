@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../containers/Header';
-import VideoCurrentPlaying from '../containers/VideoCurrentPlaying'; 
-/* import LayoutPlaying from '../layouts/LayoutPlaying'; */
+import VideoCurrentPlaying from '../containers/VideoCurrentPlaying';  
 import MainLayout from '../layouts/LayoutMain';
 
 const Playing =()=>{

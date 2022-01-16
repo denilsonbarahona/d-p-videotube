@@ -14,7 +14,7 @@ const PlayItem =({item , type})=>{
             <PlayDescription 
                 title={item.snippet.title}
                 channel={item.channel}
-                viewCount={item.statistics.viewCount}
+                viewCount={item.statistics?.viewCount || 0}
                 publichAt={item.snippet.publishedAt}
                 type={type}/>            
         </LayoutPlayItem>        

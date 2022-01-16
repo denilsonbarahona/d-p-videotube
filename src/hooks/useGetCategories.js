@@ -7,7 +7,6 @@ const useGetCategories =()=>{
     useEffect(async()=>{
         const categoriesReponse = await getCategories();
         if(categoriesReponse.status === 1) {
-            console.log(categoriesReponse.data)
             setCategories(categoriesReponse.data.items?.splice(0,10))
         }
     },[])

@@ -6,8 +6,10 @@ import '../styles/containers/Suggestions.css';
 
 const Suggestions =()=>{
 
-    const {state} = useContext(AppContext);
-    useGetPlayList(); 
+    const {state} = useContext(AppContext);    
+    if(!state.playlist.length)
+        useGetPlayList("playlist"); 
+        
     return (
         <div className='Suggestions'>
             <h1 className='Suggestions-header'>Videos sugeridos</h1>

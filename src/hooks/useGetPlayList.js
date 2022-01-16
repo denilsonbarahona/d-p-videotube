@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import getPlayList from "../API/getPlayList";
-import getChannel from "../API/getChannel";
+import getChannel from "../API/getChannel"; 
+import getSearchList from '../API/getSearch';
 import AppContext from "../context/AppContext";
 
 
@@ -18,19 +19,30 @@ const ChannelInformation=(frontVideos)=>{
     return frontData;
 }
 
-const useGetPlayList =()=>{
-    const {state,setPlayList} = useContext(AppContext); 
+const useGetPlayList =(type, param)=>{
+    const {state, setPlayList, setSearchList} = useContext(AppContext); 
 
-    useEffect(async()=>{
-        getPlayList(state.category)
-        .then(async response=>{
-            if(response.status === 1) { 
-              const DataWithChannel = await Promise.all( ChannelInformation(response.data.items) ); 
-              setPlayList(DataWithChannel)
-            } 
-        })
-        .catch(_=>{});
-    },[state.category]);
+    useEffect(async()=>{ 
+        if(type !== 'search') {
+                getPlayList(state.category)
+                .then(async response=>{
+                    if(response.status === 1) { 
+                        const DataWithChannel = await Promise.all( ChannelInformation(response.data.items) ); 
+                        setPlayList(DataWithChannel)
+                    } 
+                })
+                .catch(_=>{}); 
+        } else {
+            getSearchList(param)
+            .then(async response=>{
+                if(response.status === 1) {              
+                    const DataWithChannel = await Promise.all( ChannelInformation(response.data.items) );                     
+                    setSearchList(DataWithChannel)
+                } 
+            })
+            .catch(_=>{}); 
+        }
+    },[state.category, param]);
 
 }
 

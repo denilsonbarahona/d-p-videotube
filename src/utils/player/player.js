@@ -6,7 +6,9 @@ class Player  {
     
     constructor(player, controls) {
         this.#player = player;
-        this.#controls = controls; 
+        this.#controls = controls;
+        this.#play(); 
+        
         this.#controls.play.addEventListener("click", _=>{   
             this.#play();
         });
