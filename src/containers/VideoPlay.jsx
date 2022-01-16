@@ -6,7 +6,7 @@ import VideoControls from '../components/VideoControls';
 
 const VideoPlay =()=>{
     useEffect(()=>{
-        import('../utils/player');
+        import('../utils/playerInit');
     },[])
 
     return (
