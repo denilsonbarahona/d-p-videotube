@@ -1,0 +1,16 @@
+.Suggestions{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    block-size: 100%; 
+}
+
+.Suggestions > *{
+    margin: 0;
+    padding: 0;
+}
+
+.Suggestions-header{
+    font: var(--body1-bold);
+    color: var(--white);
+}

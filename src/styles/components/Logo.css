@@ -2,6 +2,8 @@
    inline-size: 9.5625rem;
    block-size: 2.5rem;
    cursor: pointer;
+   margin: 0;
+   padding: 0;
 }
 
 .Logo-image{

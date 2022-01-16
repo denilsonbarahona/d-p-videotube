@@ -4,6 +4,10 @@
     column-gap: .5rem;
 }
 
+.suggestDescription > .playDescription-figure {
+    display: block;
+}
+
 .playDescription-figure {
     inline-size: 2rem;
     block-size: 2rem; 
@@ -33,4 +37,10 @@
 .playDescription-info {
     font: var(--body2-regular);
     color: var(--grey);
+}
+
+@media screen and (min-width: 1024px) {
+    .suggestDescription > .playDescription-figure {
+        display: none;
+    }    
 }

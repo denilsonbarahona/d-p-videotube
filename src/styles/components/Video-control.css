@@ -1,0 +1,58 @@
+.video{
+    position: relative; 
+    margin: 0; 
+    max-block-size: 40rem; 
+    background-color: black;
+}
+
+.video-item {
+    vertical-align: middle;
+    inline-size: 100%; 
+    block-size: 100%;
+}
+
+.control{
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    background-color: transparent; 
+    padding: .5rem;
+}
+
+.control-timebar {
+    inline-size: 100%;
+    block-size: 0.25rem;
+    background-color: var(--grey-2);
+    margin-block-end: .5rem; 
+    cursor: pointer;
+}
+
+.control-progress{ 
+    inline-size: 0%; 
+    block-size: inherit;
+    background-color: var(--red);
+}
+
+.control-actions {
+    display: flex;
+    gap: .5rem;
+}
+
+.control-timer {    
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    font: var(--body2-regular);
+}
+
+.control-play,
+.control-pause {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.control-pause {
+    display: none;
+}

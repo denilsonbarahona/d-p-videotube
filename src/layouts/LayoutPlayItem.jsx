@@ -1,11 +1,16 @@
 import React from 'react';
-import '../styles/layouts/LayoutPlayItem.css';
+import { Link } from 'react-router-dom';
+import '../styles/layouts/LayoutPlayItem.css'; 
 
-const LayoutPlayItem =({children})=>{
+const LayoutPlayItem =({type ,children})=>{ 
     return (
-        <div className="LayoutPlayItem">
-            {children}
-        </div>
+        <Link to="/play" style={{textDecoration:"none"}}>
+            <div 
+                className={'LayoutPlayItem '+`${type ==='suggest'&&'LayoutSuggestItem'}`}>
+                {children}
+            </div>
+        
+        </Link>
     )
 }
 

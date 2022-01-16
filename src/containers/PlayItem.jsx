@@ -4,12 +4,19 @@ import LayoutPlayItem from '../layouts/LayoutPlayItem';
 import PlayDescription from '../components/PlayDescription';
 
 
-const PlayItem =()=>{
+const PlayItem =({item , type})=>{
     return (
-        <LayoutPlayItem>
+        <LayoutPlayItem            
+            type={type}>
             <Thumbnail
-                thumbsize='thumbnail--big'/>        
-            <PlayDescription/>            
+                thumbnails={item.snippet.thumbnails}
+                thumbsuggest={`${type==='suggest'&&'thumbnail-suggest'}`}/>       
+            <PlayDescription 
+                title={item.snippet.title}
+                channel={item.channel}
+                viewCount={item.statistics.viewCount}
+                publichAt={item.snippet.publishedAt}
+                type={type}/>            
         </LayoutPlayItem>        
     )
 }

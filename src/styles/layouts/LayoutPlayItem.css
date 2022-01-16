@@ -1,7 +1,18 @@
-.LayoutPlayItem{
+.LayoutPlayItem,
+.LayoutSuggestItem {
     inline-size: 18.9375rem; 
     display: grid;
     row-gap: 1rem;    
-    cursor: pointer; 
+    cursor: pointer;  
+    text-decoration: none;
 }
 
+@media screen and (min-width:1024px) {
+    .LayoutSuggestItem {
+        grid-template-columns: 12.1875rem 1fr;
+        gap: 1rem;
+        inline-size: 25.8125rem;
+        block-size: 6.8125rem;
+    }
+        
+}

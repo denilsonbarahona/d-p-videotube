@@ -1,17 +1,8 @@
 .thumbnail {   
     position: relative;
-}
-
-.thumbnail--big {
     inline-size: 18.9375rem;
     block-size: 10.625rem;
 }
-
-.thumbnail--small {
-    inline-size: 12.1875rem;
-    block-size: 6.8125rem;
-}
-
 
 .thumbnail-figure {
     display: inline-block;
@@ -45,4 +36,11 @@
     color: var(--white);
     text-align: center;
     font: var(--body2-regular);
+}
+
+@media screen and (min-width: 1024px) {
+    .thumbnail.thumbnail-suggest {
+        inline-size: 12.1875rem;
+        block-size: 6.8125rem;        
+    }    
 }
