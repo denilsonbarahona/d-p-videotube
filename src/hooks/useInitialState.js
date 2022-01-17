@@ -9,7 +9,7 @@ const initialState = {
 
 const useInitialState =()=>{
     const [state, setState] = useState(initialState);
-    const selectedCategory=(payload)=>{
+    const selectedCategory=(payload)=>{        
         setState({
             ...state ,
             category: payload

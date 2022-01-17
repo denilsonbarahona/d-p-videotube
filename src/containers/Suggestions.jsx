@@ -8,7 +8,7 @@ const Suggestions =()=>{
 
     const {state} = useContext(AppContext);    
     if(!state.playlist.length)
-        useGetPlayList("playlist"); 
+        useGetPlayList(); 
         
     return (
         <div className='Suggestions'>

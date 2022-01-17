@@ -10,10 +10,7 @@ import '../styles/components/tags.css';
 
 const Home =()=>{
     const {state} = useContext(AppContext);
-    if(!state.playlist.length)
-        useGetPlayList("playlist"); 
-
-
+    useGetPlayList(); 
     return (
         <MainLayout>
             <Header/>

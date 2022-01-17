@@ -4,14 +4,14 @@ import PlayItem from '../containers/PlayItem';
 import Header from '../containers/Header';
 import MainLayout from '../layouts/LayoutMain';
 import LayoutPlayList from '../layouts/LayoutPlayList';
-import useGetPlayList from '../hooks/useGetPlayList';
+import useGetSearchList from '../hooks/useGetSearchList';
 import AppContext from '../context/AppContext';
 import '../styles/components/tags.css';
 
 const Search =()=>{
     const {state} = useContext(AppContext);
     const {query} = useParams();
-    useGetPlayList("search", query);
+    useGetSearchList(query);
 
  
     return (

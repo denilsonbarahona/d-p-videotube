@@ -19,19 +19,20 @@ const ChannelInformation=(frontVideos)=>{
     return frontData;
 }
 
-const useGetPlayList =()=>{
-    const {state, setPlayList} = useContext(AppContext);     
-    useEffect(async()=>{   
-                getPlayList(state.category)
-                .then(async response=>{
-                    if(response.status === 1) { 
-                        const DataWithChannel = await Promise.all( ChannelInformation(response.data.items) ); 
-                        setPlayList(DataWithChannel)
-                    } 
-                })
-                .catch(_=>{});  
-    },[state.category]);
+const useGetSearchList =( param)=>{
+    const {setSearchList} = useContext(AppContext); 
+    
+    useEffect(async()=>{ 
+            getSearchList(param)
+            .then(async response=>{
+                if(response.status === 1) {              
+                    const DataWithChannel = await Promise.all( ChannelInformation(response.data.items) );                     
+                    setSearchList(DataWithChannel)
+                } 
+            })
+            .catch(_=>{});  
+    },[param]);
 
 }
 
-export default useGetPlayList;
+export default useGetSearchList;
